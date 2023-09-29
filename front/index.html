@@ -18,6 +18,8 @@
         async function fazerSoma() {
             const numero1 = parseFloat(document.getElementById('numero1').value);
             const numero2 = parseFloat(document.getElementById('numero2').value);
+            console.log(numero1)
+            console.log(numero2)
 
             if (isNaN(numero1) || isNaN(numero2)) {
                 alert("Por favor, insira números válidos.");
@@ -26,8 +28,8 @@
 
             try {
                 // Substitua "http://outro-endereco-ec2/sua-rota-api" pela URL da sua API no outro EC2.
-                const response = await fetch(`http://44.220.11.255/
-                soma=${numero1},${numero2}`);
+                const response = await fetch(`http://44.220.11.255/soma?numero1=${numero1}&numero2=${numero2}`);
+                console.log(response)
 
                 if (response.ok) {
                     const data = await response.json();
