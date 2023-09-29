@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 
-@app.route('/sua-rota-api', methods=['GET'])
+@app.route('/soma', methods=['GET'])
 def somar():
     try:
         numero1 = float(request.args.get('numero1', 0))  # Use 0 como valor padrão se não for fornecido
