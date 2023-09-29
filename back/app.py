@@ -1,6 +1,8 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)  # Adiciona a extensão CORS à sua aplicação Flask
 
 @app.route('/soma', methods=['GET'])
 def somar():
