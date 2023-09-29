@@ -26,7 +26,8 @@
 
             try {
                 // Substitua "http://outro-endereco-ec2/sua-rota-api" pela URL da sua API no outro EC2.
-                const response = await fetch(`http://outro-endereco-ec2/sua-rota-api?soma=${numero1},${numero2}`);
+                const response = await fetch(`http://44.220.11.255/
+                soma=${numero1},${numero2}`);
 
                 if (response.ok) {
                     const data = await response.json();
