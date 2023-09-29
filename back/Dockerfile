@@ -7,8 +7,8 @@ WORKDIR /app
 # Copie os arquivos de aplicação para o diretório de trabalho
 COPY app.py /app/
 
-# Instale as dependências da aplicação (Flask neste caso)
-RUN pip install Flask
+# Instale as dependências Python especificadas no requirements.txt
+RUN pip install -r requirements.txt
 
 # Exponha a porta em que o Flask estará em execução (a mesma que você configurou na aplicação Flask)
 EXPOSE 80
